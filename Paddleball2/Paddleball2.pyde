@@ -24,23 +24,25 @@ def draw():
     smooth()
     ellipse(x,y,25,25)
     fill(122,122,122)
-    keyPressed == True:
-         (keyCode == LEFT):
-            w = w -1
-    keyPressed()== True:
-         (keyCode == RIGHT):
-            w = w + 1
+    if keyPressed == True:
+         if (keyCode == LEFT):
+            w = w -3
+            if w <= 3:
+                w = w
+    if keyPressed== True:
+         if (keyCode == RIGHT):
+            w = w + 3
+            if w >= 285:
+                w =
     rect(w,477,50,20)
-    w=25
-    h=25
     if a == 1:
         x+=3
         if x > 286:
-            a =-1
+            a = -1
     elif a == -1:
         x-=3
         if x < 14:
-            a= +1
+            a = +1 
     if b == 1:
         y=y+3
         if y > 505:
@@ -52,8 +54,8 @@ def draw():
         y-=1
         if y < 9:
             b = + 1    
-    if x >= mouseX and x <= mouseX+50 :
-        if y >= mouseY and y >= mouseY+ 20:
+    if x >= w and x <= w +50 :
+        if y >= mouseY and y <= mouseY+ 20:
             b = -1
             print("it hit")
             score = score+1
